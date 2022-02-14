@@ -7,6 +7,7 @@ import { MenuComponent } from './menu/menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardStatusComponent } from './dashboard/card-status/card-status.component';
 import { TabelaIndicacoesComponent } from './dashboard/tabela-indicacoes/tabela-indicacoes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { TabelaIndicacoesComponent } from './dashboard/tabela-indicacoes/tabela-
     MenuComponent,
     DashboardComponent,
     CardStatusComponent,
-    TabelaIndicacoesComponent
+    TabelaIndicacoesComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

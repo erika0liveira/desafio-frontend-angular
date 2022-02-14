@@ -9,10 +9,17 @@ main {
 
     .principal {
         width: 90%;
+        background-color: #F7F7F7;
         
         .retangulo {
+            background-color: white;
             border: 1px solid #CED4D8;
             height: 95px;
+        }
+
+        .output {
+            padding: 40px 100px;
+
         }
     }
 

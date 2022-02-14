@@ -1,5 +1,5 @@
 .retangulo {
-    background-color: var(--verde-agua);
+    background-color: #009E9A;
     height: 100%;
     
     .menu {
@@ -8,11 +8,10 @@
         align-items: center;
         height: 95px;
         width: 100%;
-        border-bottom: 1px solid #CED4D8;
+        border-bottom: 1px solid #9DE4E2;
 
         h1 {
             text-align: center;
-            font-family: Open Sans;
             font-size: 16px;
             font-weight: 700;
             color: white;

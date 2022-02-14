@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    height: 100vh;
+
+    .menu {
+        width: 10%;
+        flex-grow: 1;     
+    }
+
+    .principal {
+        width: 90%;
+        
+        .retangulo {
+            border: 1px solid #CED4D8;
+            height: 95px;
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+.card {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    width: 15vw;
+    height: 100px;
+    padding: 10px 20px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 3px 8px;
+    border-radius: 5px;
+    color: #009E9A;
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    p {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+}

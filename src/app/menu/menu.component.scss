@@ -1,0 +1,21 @@
+.retangulo {
+    background-color: #009E9A;
+    height: 100%;
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95px;
+        width: 100%;
+        border-bottom: 1px solid #9DE4E2;
+
+        h1 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+}

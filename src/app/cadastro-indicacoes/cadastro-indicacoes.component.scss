@@ -1,0 +1,108 @@
+:host {
+    font-family: 'Open Sans';
+    color: #343224;
+}
+
+::placeholder {
+    color: #B5B5B5;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.voltar-pagina {
+    padding-bottom: 30px;
+    
+    font-size: 12px;
+    color: #40CFCB;
+
+    button {
+        border: none;   
+
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #40CFCB;
+
+        background-color: unset;
+    }
+}
+
+.formulario-cadastro {
+
+    h1 {
+        width: 100%;
+
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+
+    .formulario {
+        box-shadow: rgba(0, 0, 0, 0.13) 0px 3px 8px;
+        border-radius: 5px;
+    
+        padding: 50px;
+
+        font-size: 14px;
+    
+        background-color: white;
+
+        .formulario-campos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .campo {
+                width: 50%;
+                padding-bottom: 20px;
+
+                input {
+                    width: 90%;
+                    height: 40px;
+                    margin-top: 10px;
+                    padding-left: 20px;
+                    
+                    border-style: solid;
+                    box-sizing: border-box;
+                    border-width: 1px;
+                    border-radius: 5px;
+                    border-color: #D9D9D9;
+                }
+            }
+        }
+
+        .formulario-botoes {
+            display: flex;
+            justify-content: space-between;
+
+            padding-top: 60px;
+
+            button {
+                height: 40px;
+                border: 0;
+                border-radius: 5px;
+
+                font-size: 16px;
+                font-weight: bold;
+                text-transform: uppercase;
+        
+                background-color: unset;
+            }
+
+            .cancelar {
+                width: 180px;
+
+                color: #707070;
+                background-color: #CECECE;
+            }
+
+            .salvar {
+                width: 250px;
+
+                color: white;
+                background-color: #009E9A;
+            }
+        }
+    }
+}

@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardStatusComponent } from './dashboard/card-status/card-status.component';
 import { TabelaIndicacoesComponent } from './dashboard/tabela-indicacoes/tabela-indicacoes.component';
 import { FormsModule } from '@angular/forms';
+import { CadastroIndicacoesComponent } from './cadastro-indicacoes/cadastro-indicacoes.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     CardStatusComponent,
     TabelaIndicacoesComponent,
+    CadastroIndicacoesComponent,
     
   ],
   imports: [

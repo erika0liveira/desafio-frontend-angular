@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CadastroIndicacoesComponent } from './cadastro-indicacoes/cadastro-indicacoes.component';
+import { DetalhesIndicacoesComponent } from './detalhes-indicacoes/detalhes-indicacoes.component'
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'cadastro-indicacoes',
     component: CadastroIndicacoesComponent
+  },
+  {
+    path: 'detalhes-indicacoes',
+    component: DetalhesIndicacoesComponent
   }
 ];
 

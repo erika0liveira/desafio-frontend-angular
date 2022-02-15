@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CadastroIndicacoesComponent } from './cadastro-indicacoes/cadastro-indicacoes.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
     path:'',
     pathMatch: 'prefix',
     redirectTo: 'dashboard'
+  },
+  {
+    path:'cadastro-indicacoes',
+    component: CadastroIndicacoesComponent
   }
 ];
 

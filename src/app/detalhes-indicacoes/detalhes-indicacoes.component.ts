@@ -22,4 +22,14 @@ export class DetalhesIndicacoesComponent implements OnInit {
     this.indicacoesService.obterPorId(this.idIndicacao).subscribe(indicacao => this.dadosIndicado = indicacao)
   }
 
+  obterClasseStatus(status:string): string {
+    switch(status) {
+      case "proposta fechada": return "proposta-fechada"
+      case "sem corretor": return "sem-corretor"
+      case "em andamento": return "em-andamento"
+      case "em negociação": return "em-negociacao"
+      default: return ""
+    }
+  }
+
 }

@@ -34,7 +34,22 @@ table {
 
     .col-status{
         width: 20%;
+
+        text-transform: uppercase;
     }
+
+    .proposta-fechada {
+        font-size: 14px;
+        font-weight: bold;
+        color: #007508;
+    }
+
+    .sem-corretor {
+        font-size: 14px;
+        font-weight: bold;
+        color: #AA6600;
+    }
+    
 
     tbody tr {
         height: 50px;

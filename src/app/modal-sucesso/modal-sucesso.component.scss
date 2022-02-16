@@ -1,0 +1,41 @@
+.fechar {
+    position: absolute;
+    top: 370px;
+    right: 680px;
+    
+    button {
+        background-color: unset;
+        border: none;
+        
+        i {
+            font-size: 13px;                
+        }
+    }
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 50px;
+
+    i {
+        margin-bottom: 20px;
+
+        font-size: 95px;
+        text-align: center;
+        color: #009E9A;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+        color: #343224;
+    }
+}

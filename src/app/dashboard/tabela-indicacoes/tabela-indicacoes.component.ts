@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { max } from 'rxjs';
 import Indicacao from 'src/app/models/indicacao.model';
 import { IndicacoesService } from 'src/app/services/indicacoes.service';
 

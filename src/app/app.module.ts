@@ -13,6 +13,10 @@ import { CadastroIndicacoesComponent } from './cadastro-indicacoes/cadastro-indi
 import { DetalhesIndicacoesComponent } from './detalhes-indicacoes/detalhes-indicacoes.component';
 import { IndicacoesService } from './services/indicacoes.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalSucessoComponent } from './modal-sucesso/modal-sucesso.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -23,14 +27,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TabelaIndicacoesComponent,
     CadastroIndicacoesComponent,
     DetalhesIndicacoesComponent,
+    ModalSucessoComponent,
     
   ],
+
+  entryComponents: [
+    ModalSucessoComponent,
+  ],
+  
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [IndicacoesService],
   bootstrap: [AppComponent]

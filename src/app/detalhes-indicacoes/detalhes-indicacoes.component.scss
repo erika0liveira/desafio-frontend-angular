@@ -111,6 +111,22 @@ button:hover {
         
         font-size: 16px;
         font-weight: bold;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    .proposta-fechada {
+        font-size: 14px;
+        font-weight: bold;
+        color: #007508;
+    }
+
+    .sem-corretor {
+        font-size: 14px;
+        font-weight: bold;
+        color: #AA6600;
     }
    
 }

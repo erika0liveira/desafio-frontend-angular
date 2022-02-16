@@ -39,11 +39,20 @@
     <button [ngClass]="{'desabilitado':numeroPaginaAtual===0}" (click)="mudarPagina(numeroPaginaAtual)">
         <i class="fas fa-angle-left"></i>
     </button>
-    <button class="numeros" *ngFor="let pagina of obterPaginas()" [ngClass]="{'selecionado':pagina === (numeroPaginaAtual + 1)}" (click)="mudarPagina(pagina)">{{ pagina }}</button>
-    <button [ngClass]="{'desabilitado':numeroPaginaAtual===obterQuantidadePaginas()-1}" (click)="mudarPaginaDireita(numeroPaginaAtual)">
+
+
+    <button class="numeros" *ngFor="let pagina of obterPaginas()"
+        [ngClass]="{'selecionado':pagina === (numeroPaginaAtual + 1)}" (click)="mudarPagina(pagina)">{{ pagina
+        }}</button>
+
+
+    <button [ngClass]="{'desabilitado':numeroPaginaAtual>=obterQuantidadePagina()-1}"
+        (click)="mudarPaginaDireita(numeroPaginaAtual)">
         <i class="fas fa-angle-right"></i>
     </button>
-    <button [ngClass]="{'desabilitado':numeroPaginaAtual===obterQuantidadePaginas()-1}" (click)="mudarPaginaFinal(numeroPaginaAtual)">
+    <button [ngClass]="{'desabilitado':numeroPaginaAtual>=obterQuantidadePagina()-1}"
+        (click)="mudarPaginaFinal(numeroPaginaAtual)">
         <i class="fas fa-angle-double-right"></i>
     </button>
+    
 </div>

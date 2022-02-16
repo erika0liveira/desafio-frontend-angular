@@ -16,14 +16,22 @@ export class TabelaIndicacoesComponent implements OnInit {
   maximoPagina = 5
   numeroPaginaAtual = 0
 
-  obterQuantidadePagina() {
-    return this.valoresTabela.length / this.maximoPagina
-  }
-
   constructor(private indicacoesService: IndicacoesService) { }
 
-  ngOnInit(): void {
-    console.log(this.obterQuantidadePagina())
+  ngOnInit(): void {        
+  }
+
+  obterQuantidadePagina() {
+
+    let tamanho = this.valoresTabela.length / this.maximoPagina
+
+    if(tamanho % 1 > 0) {
+      return parseInt(tamanho.toFixed(0))+1
+      
+    } else {
+      return parseInt(tamanho.toFixed(0))
+    }
+    
   }
 
   obterPaginas() {
@@ -32,10 +40,10 @@ export class TabelaIndicacoesComponent implements OnInit {
       quantidadePaginacao.push(i + 1)
     }
     
-    let primeiroIndice = this.numeroPaginaAtual;
+    let primeiroIndice = this.numeroPaginaAtual-1;
     let maximoIndice = primeiroIndice + 3;
     
-    if (quantidadePaginacao.length > 5) {
+    if (quantidadePaginacao.length > this.maximoPagina) {
       for (let i = 0; i < this.obterQuantidadePagina(); i++) {
         if (i === maximoIndice) {
           primeiroIndice++;
@@ -44,14 +52,9 @@ export class TabelaIndicacoesComponent implements OnInit {
         }
       }
     }
-
     return quantidadePaginacao.slice(primeiroIndice, maximoIndice)
   }
-
-  obterQuantidadePaginas() {
-    return this.valoresTabela.length / this.maximoPagina
-  }
-
+ 
   obterPaginaAtual() {
     let indexInicio = this.numeroPaginaAtual * this.maximoPagina
     let indexFim = indexInicio + this.maximoPagina
@@ -82,7 +85,7 @@ export class TabelaIndicacoesComponent implements OnInit {
   }
 
   mudarPaginaFinal(numeroPaginaAtual: number) {
-    this.numeroPaginaAtual = this.obterQuantidadePaginas() - 1
+    this.numeroPaginaAtual = this.obterQuantidadePagina()-1
   }
 
   excluirIndicacao(id?: number) {

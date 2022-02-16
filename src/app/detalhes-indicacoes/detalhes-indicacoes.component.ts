@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalhes-indicacoes',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalhesIndicacoesComponent implements OnInit {
 
-  constructor() { }
+  dadosIndicado: any = {}
+
+  constructor(router: Router) {
+    const data = router.getCurrentNavigation()
+    
+    if(data) {
+      this.dadosIndicado = data.extras.state
+    } 
+  }
 
   ngOnInit(): void {
   }

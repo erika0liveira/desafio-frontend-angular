@@ -16,32 +16,32 @@
 
             <div class="informacoes-indicado nome-indicado">
                 <p class="titulo-informacao">Nome completo</p>
-                <p class="descricao-informacao">Nome completo do indicado</p>
+                <p class="descricao-informacao"> {{ dadosIndicado.nome }} </p>
             </div>
             
             <div class="informacoes-indicado">
                 <p class="titulo-informacao">Telefone</p>
-                <p class="descricao-informacao">1122553366</p>
+                <p class="descricao-informacao"> {{ dadosIndicado.telefone }}</p>
             </div>
 
             <div class="informacoes-indicado">
                 <p class="titulo-informacao">Email</p>
-                <p class="descricao-informacao">email@email.com</p>
+                <p class="descricao-informacao"> {{ dadosIndicado.email}} </p>
             </div>
 
             <div class="informacoes-indicado">
                 <p class="titulo-informacao">Empresa</p>
-                <p class="descricao-informacao">xyz</p>
+                <p class="descricao-informacao"> {{ dadosIndicado.empresa }}</p>
             </div>
 
             <div class="informacoes-indicado">
                 <p class="titulo-informacao">Corretor</p>
-                <p class="descricao-informacao">nome do corretor</p>
+                <p class="descricao-informacao">{{ dadosIndicado.corretor }}</p>
             </div>
         </div>
     </div>       
     
     <div class="cartao status">
-        <h2>Status:</h2>
+        <h2>Status: {{ dadosIndicado.status }}</h2>
     </div>
 </div>

@@ -13,302 +13,48 @@ export class TabelaIndicacoesComponent implements OnInit {
       check: false,
       nome: "rafaela oliva assunção vieira",
       corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada"
+      status: "proposta fechada",
+      telefone: "21999999999",
+      email: "a@email.com",
+      empresa: "xyz"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome2",
+      nome: "nome do lead sobrenome 2",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "11888888888",
+      email: "b@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome3",
+      nome: "nome do lead sobrenome 3",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "45777777777",
+      email: "c@email.com.br",
+      empresa: "jkl"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome4",
+      nome: "nome do lead sobrenome 4",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome5",
+      nome: "nome do lead sobrenome 5",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 6",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 7",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome8",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome9",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome10",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome11",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome12",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome13",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome14",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome15",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome16",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome17",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome18",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome19",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome20",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome21",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome22",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome23",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome24",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome25",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome26",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome27",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome28",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome29",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome30",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome31",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome32",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome33",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome34",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome35",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome ULTIMO",
-      corretor: "-",
-      status: "sem corretor"
-    }
+    
   ]
 
   maximoPagina = 5

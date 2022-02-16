@@ -16,7 +16,7 @@
             <td class="col-corretor">{{ valor.corretor }}</td>
             <td class="col-status">{{ valor.status }}</td>
             <td class="col-acoes icones">
-                <i class="fa fa-address-card"></i>
+                <i routerLink="../detalhes-indicacoes" [state]="valor" class="fa fa-address-card"></i>
                 <i class="fas fa-trash-alt"></i>
         </tr>
     </tbody>

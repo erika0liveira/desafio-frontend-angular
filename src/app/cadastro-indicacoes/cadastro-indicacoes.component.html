@@ -12,33 +12,33 @@
         <div class="formulario-campos">
             <div class="campo">
                 <label for="nome-completo">Nome completo</label><br>
-                <input type="text" id="nome-completo" name="nome-completo" placeholder="Digite aqui o nome do cliente" required><br>
+                <input type="text" id="nome-completo" name="nome-completo" placeholder="Digite aqui o nome do cliente" required [(ngModel)]="indicacao.nome"><br>
             </div>
 
             <div class="campo">
                 <label for="telefone">Telefone</label><br>
-                <input type="tel" id="telefone" name="telefone" placeholder="DDD + Telefone" required><br>
+                <input type="tel" id="telefone" name="telefone" placeholder="DDD + Telefone" required [(ngModel)]="indicacao.telefone"><br>
             </div>
 
             <div class="campo">
                 <label for="empresa">Empresa - opcional</label><br>
-                <input type="text" id="empresa" name="empresa" placeholder="Digite aqui o nome da empresa"><br>
+                <input type="text" id="empresa" name="empresa" placeholder="Digite aqui o nome da empresa" [(ngModel)]="indicacao.empresa"><br>
             </div>
             
             <div class="campo">
                 <label for="email">Email</label><br>
-                <input type="email" id="email" name="email" placeholder="Insira aqui o email do cliente" required><br>
+                <input type="email" id="email" name="email" placeholder="Insira aqui o email do cliente" required [(ngModel)]="indicacao.email"><br>
             </div>
             
             <div class="campo">
                 <label for="corretor">Corretor</label><br>
-                <input type="text" id="corretor" name="corretor" placeholder="Digite aqui o nome do corretor" required><br>
+                <input type="text" id="corretor" name="corretor" placeholder="Digite aqui o nome do corretor" required [(ngModel)]="indicacao.corretor"><br>
             </div>
         </div>
         
         <div class="formulario-botoes">
             <button class="cancelar">cancelar</button>
-            <button class="salvar">salvar e continuar</button>
+            <button class="salvar" (click)="salvar()">salvar e continuar</button>
         </div>
     </div>
 </div>

@@ -14,10 +14,10 @@
             <td class="col-check checkbox"><input [(ngModel)]="valor.check" type="checkbox"></td>
             <td class="col-nome">{{ valor.nome }}</td>
             <td class="col-corretor">{{ valor.corretor }}</td>
-            <td class="col-status">{{ valor.status }}</td>
+            <td class="col-status" [ngClass]="obterClasseStatus(valor.status || '')">{{ valor.status }}</td>
             <td class="col-acoes icones">
-                <i routerLink="../detalhes-indicacoes" [state]="valor" class="fa fa-address-card"></i>
-                <i class="fas fa-trash-alt"></i>
+                <i [routerLink]="'../detalhes-indicacoes/' + valor.id" class="fa fa-address-card"></i>
+                <i class="fas fa-trash-alt" (click)="excluirIndicacao(valor.id)"></i>
         </tr>
     </tbody>
 

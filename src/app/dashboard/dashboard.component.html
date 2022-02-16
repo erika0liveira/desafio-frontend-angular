@@ -3,13 +3,13 @@
 </div>
 
 <div class="cards-status">
-    <app-card-status [quantidade]="8" [descricao]="'indicações sem corretor'"></app-card-status>
-    <app-card-status [quantidade]="2" [descricao]="'propostas fechadas'"></app-card-status>
-    <app-card-status [quantidade]="10" [descricao]="'em andamento'"></app-card-status>
-    <app-card-status [quantidade]="5" [descricao]="'em negociação'"></app-card-status>
+    <app-card-status [quantidade]="contarStatus('sem corretor')" [descricao]="'indicações sem corretor'"></app-card-status>
+    <app-card-status [quantidade]="contarStatus('proposta fechada')" [descricao]="'propostas fechadas'"></app-card-status>
+    <app-card-status [quantidade]="contarStatus('em andamento')" [descricao]="'em andamento'"></app-card-status>
+    <app-card-status [quantidade]="contarStatus('em negociação')" [descricao]="'em negociação'"></app-card-status>
 </div>
 
 <div class="tabela-indicacoes">
     <h1>indicações</h1>
-    <app-tabela-indicacoes></app-tabela-indicacoes>
+    <app-tabela-indicacoes [valoresTabela]="indicacoes"></app-tabela-indicacoes>
 </div>

@@ -19,7 +19,7 @@ const routes: Routes = [
     component: CadastroIndicacoesComponent
   },
   {
-    path: 'detalhes-indicacoes',
+    path: 'detalhes-indicacoes/:id',
     component: DetalhesIndicacoesComponent
   }
 ];

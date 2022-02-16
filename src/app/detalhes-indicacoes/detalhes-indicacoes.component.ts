@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IndicacoesService } from '../services/indicacoes.service';
 
 @Component({
   selector: 'app-detalhes-indicacoes',
@@ -10,15 +11,15 @@ export class DetalhesIndicacoesComponent implements OnInit {
 
   dadosIndicado: any = {}
 
-  constructor(router: Router) {
-    const data = router.getCurrentNavigation()
-    
-    if(data) {
-      this.dadosIndicado = data.extras.state
-    } 
+  idIndicacao: number = 0
+
+  constructor(private indicacoesService: IndicacoesService, router: ActivatedRoute) {
+    const id = router.snapshot.paramMap.get('id') || '';
+    this.idIndicacao = parseInt(id);
   }
 
   ngOnInit(): void {
+    this.indicacoesService.obterPorId(this.idIndicacao).subscribe(indicacao => this.dadosIndicado = indicacao)
   }
 
 }

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { max } from 'rxjs';
+import Indicacao from 'src/app/models/indicacao.model';
+import { IndicacoesService } from 'src/app/services/indicacoes.service';
 
 @Component({
   selector: 'app-tabela-indicacoes',
@@ -9,490 +11,33 @@ import { max } from 'rxjs';
 
 export class TabelaIndicacoesComponent implements OnInit {
 
-  valoresTabela = [
-    {
-      check: false,
-      nome: "rafaela oliva assunção vieira",
-      corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada",
-      telefone: "21999999999",
-      email: "a@email.com",
-      empresa: "xyz"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 2",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "11888888888",
-      email: "b@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 3",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "45777777777",
-      email: "c@email.com.br",
-      empresa: "jkl"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 4",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 5",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 6",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 7",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 8",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "rafaela oliva assunção vieira",
-      corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada",
-      telefone: "21999999999",
-      email: "a@email.com",
-      empresa: "xyz"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 2",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "11888888888",
-      email: "b@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 3",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "45777777777",
-      email: "c@email.com.br",
-      empresa: "jkl"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 4",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 5",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 6",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 7",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 8",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "rafaela oliva assunção vieira",
-      corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada",
-      telefone: "21999999999",
-      email: "a@email.com",
-      empresa: "xyz"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 2",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "11888888888",
-      email: "b@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 3",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "45777777777",
-      email: "c@email.com.br",
-      empresa: "jkl"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 4",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 5",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 6",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 7",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 8",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "rafaela oliva assunção vieira",
-      corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada",
-      telefone: "21999999999",
-      email: "a@email.com",
-      empresa: "xyz"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 2",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "11888888888",
-      email: "b@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 3",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "45777777777",
-      email: "c@email.com.br",
-      empresa: "jkl"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 4",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 5",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 6",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 7",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 8",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "rafaela oliva assunção vieira",
-      corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada",
-      telefone: "21999999999",
-      email: "a@email.com",
-      empresa: "xyz"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 2",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "11888888888",
-      email: "b@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 3",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "45777777777",
-      email: "c@email.com.br",
-      empresa: "jkl"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 4",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 5",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 6",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 7",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 8",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "12666666666",
-      email: "d@email.com.br",
-      empresa: ""
-    },
-    {
-      check: false,
-      nome: "nome do lead sobrenome 9",
-      corretor: "-",
-      status: "sem corretor",
-      telefone: "58555555555",
-      email: "e@email.com.br",
-      empresa: "asd"
-    }
-  ]
+  @Input()
+  valoresTabela = new Array<Indicacao>();
 
   maximoPagina = 5
   numeroPaginaAtual = 0
 
-  quantidadePagina = this.valoresTabela.length / this.maximoPagina
+  obterQuantidadePagina() {
+    return this.valoresTabela.length / this.maximoPagina
+  }
 
-  constructor() { }
+  constructor(private indicacoesService: IndicacoesService) { }
 
   ngOnInit(): void {
-    console.log(this.quantidadePagina)
+    console.log(this.obterQuantidadePagina())
   }
 
   obterPaginas() {
     const quantidadePaginacao = []
-    for (let i = 0; i < this.quantidadePagina; i++) {
+    for (let i = 0; i < this.obterQuantidadePagina(); i++) {
       quantidadePaginacao.push(i + 1)
     }
     
-    let primeiroIndice = this.numeroPaginaAtual-1;
+    let primeiroIndice = this.numeroPaginaAtual;
     let maximoIndice = primeiroIndice + 3;
     
     if (quantidadePaginacao.length > 5) {
-      for (let i = 0; i < this.quantidadePagina; i++) {
+      for (let i = 0; i < this.obterQuantidadePagina(); i++) {
         if (i === maximoIndice) {
           primeiroIndice++;
           maximoIndice += 1;
@@ -515,6 +60,16 @@ export class TabelaIndicacoesComponent implements OnInit {
     return this.valoresTabela.slice(indexInicio, indexFim)
   }
 
+  obterClasseStatus(status:string): string {
+    switch(status) {
+      case "proposta fechada": return "proposta-fechada"
+      case "sem corretor": return "sem-corretor"
+      case "em andamento": return "em-andamento"
+      case "em negociação": return "em-negociacao"
+      default: return ""
+    }
+  }
+
   mudarPagina(numeroPagina: number) {
     this.numeroPaginaAtual = numeroPagina - 1
   }
@@ -529,5 +84,15 @@ export class TabelaIndicacoesComponent implements OnInit {
 
   mudarPaginaFinal(numeroPaginaAtual: number) {
     this.numeroPaginaAtual = this.obterQuantidadePaginas() - 1
+  }
+
+  excluirIndicacao(id?: number) {
+    if(!id) {
+      return
+    }
+
+    this.indicacoesService.deletar(id).subscribe(_ => {
+      this.valoresTabela = this.valoresTabela.filter(valor => valor.id !== id)
+    })
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { max } from 'rxjs';
 
 @Component({
   selector: 'app-tabela-indicacoes',
@@ -13,301 +14,460 @@ export class TabelaIndicacoesComponent implements OnInit {
       check: false,
       nome: "rafaela oliva assunção vieira",
       corretor: "rafaela oliva assunção vieira",
-      status: "proposta fechada"
+      status: "proposta fechada",
+      telefone: "21999999999",
+      email: "a@email.com",
+      empresa: "xyz"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome2",
+      nome: "nome do lead sobrenome 2",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "11888888888",
+      email: "b@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome3",
+      nome: "nome do lead sobrenome 3",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "45777777777",
+      email: "c@email.com.br",
+      empresa: "jkl"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome4",
+      nome: "nome do lead sobrenome 4",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome5",
+      nome: "nome do lead sobrenome 5",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
       nome: "nome do lead sobrenome 6",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
       nome: "nome do lead sobrenome 7",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome8",
+      nome: "nome do lead sobrenome 8",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome9",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome10",
-      corretor: "-",
-      status: "sem corretor"
+      nome: "rafaela oliva assunção vieira",
+      corretor: "rafaela oliva assunção vieira",
+      status: "proposta fechada",
+      telefone: "21999999999",
+      email: "a@email.com",
+      empresa: "xyz"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome11",
+      nome: "nome do lead sobrenome 2",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "11888888888",
+      email: "b@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome12",
+      nome: "nome do lead sobrenome 3",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "45777777777",
+      email: "c@email.com.br",
+      empresa: "jkl"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome13",
+      nome: "nome do lead sobrenome 4",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome14",
+      nome: "nome do lead sobrenome 5",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome15",
+      nome: "nome do lead sobrenome 6",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome16",
+      nome: "nome do lead sobrenome 7",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome17",
+      nome: "nome do lead sobrenome 8",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome18",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome19",
-      corretor: "-",
-      status: "sem corretor"
+      nome: "rafaela oliva assunção vieira",
+      corretor: "rafaela oliva assunção vieira",
+      status: "proposta fechada",
+      telefone: "21999999999",
+      email: "a@email.com",
+      empresa: "xyz"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome20",
+      nome: "nome do lead sobrenome 2",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "11888888888",
+      email: "b@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome21",
+      nome: "nome do lead sobrenome 3",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "45777777777",
+      email: "c@email.com.br",
+      empresa: "jkl"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome22",
+      nome: "nome do lead sobrenome 4",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome23",
+      nome: "nome do lead sobrenome 5",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome24",
+      nome: "nome do lead sobrenome 6",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome25",
+      nome: "nome do lead sobrenome 7",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome26",
+      nome: "nome do lead sobrenome 8",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome27",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome28",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome29",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome30",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome31",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome32",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome33",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome34",
-      corretor: "-",
-      status: "sem corretor"
+      nome: "rafaela oliva assunção vieira",
+      corretor: "rafaela oliva assunção vieira",
+      status: "proposta fechada",
+      telefone: "21999999999",
+      email: "a@email.com",
+      empresa: "xyz"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome35",
+      nome: "nome do lead sobrenome 2",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "11888888888",
+      email: "b@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 3",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "45777777777",
+      email: "c@email.com.br",
+      empresa: "jkl"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 4",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 5",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 6",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 7",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 8",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 9",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
-      corretor: "-",
-      status: "sem corretor"
+      nome: "rafaela oliva assunção vieira",
+      corretor: "rafaela oliva assunção vieira",
+      status: "proposta fechada",
+      telefone: "21999999999",
+      email: "a@email.com",
+      empresa: "xyz"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 2",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "11888888888",
+      email: "b@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 3",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "45777777777",
+      email: "c@email.com.br",
+      empresa: "jkl"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 4",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 5",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 6",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
     },
     {
       check: false,
-      nome: "nome do lead sobrenome",
+      nome: "nome do lead sobrenome 7",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     },
     {
       check: false,
-      nome: "nome do lead sobrenome ULTIMO",
+      nome: "nome do lead sobrenome 8",
       corretor: "-",
-      status: "sem corretor"
+      status: "sem corretor",
+      telefone: "12666666666",
+      email: "d@email.com.br",
+      empresa: ""
+    },
+    {
+      check: false,
+      nome: "nome do lead sobrenome 9",
+      corretor: "-",
+      status: "sem corretor",
+      telefone: "58555555555",
+      email: "e@email.com.br",
+      empresa: "asd"
     }
   ]
 
@@ -319,20 +479,35 @@ export class TabelaIndicacoesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.quantidadePagina)
   }
 
   obterPaginas() {
     const quantidadePaginacao = []
-    for(let i = 0; i < this.quantidadePagina; i++) {
-      quantidadePaginacao.push(i+1)
+    for (let i = 0; i < this.quantidadePagina; i++) {
+      quantidadePaginacao.push(i + 1)
     }
-    return quantidadePaginacao
+    
+    let primeiroIndice = this.numeroPaginaAtual-1;
+    let maximoIndice = primeiroIndice + 3;
+    
+    if (quantidadePaginacao.length > 5) {
+      for (let i = 0; i < this.quantidadePagina; i++) {
+        if (i === maximoIndice) {
+          primeiroIndice++;
+          maximoIndice += 1;
+          return quantidadePaginacao.slice(primeiroIndice, maximoIndice)
+        }
+      }
+    }
+
+    return quantidadePaginacao.slice(primeiroIndice, maximoIndice)
   }
 
   obterQuantidadePaginas() {
     return this.valoresTabela.length / this.maximoPagina
   }
-  
+
   obterPaginaAtual() {
     let indexInicio = this.numeroPaginaAtual * this.maximoPagina
     let indexFim = indexInicio + this.maximoPagina
@@ -340,19 +515,19 @@ export class TabelaIndicacoesComponent implements OnInit {
     return this.valoresTabela.slice(indexInicio, indexFim)
   }
 
-  mudarPagina(numeroPagina:number) {
-    this.numeroPaginaAtual = numeroPagina-1
+  mudarPagina(numeroPagina: number) {
+    this.numeroPaginaAtual = numeroPagina - 1
   }
 
-  mudarPaginaDireita(numeroPagina:number) {
-    this.numeroPaginaAtual = numeroPagina+1
+  mudarPaginaDireita(numeroPagina: number) {
+    this.numeroPaginaAtual = numeroPagina + 1
   }
 
-  mudarPaginaInicio(){
+  mudarPaginaInicio() {
     this.numeroPaginaAtual = 0
   }
 
-  mudarPaginaFinal(numeroPaginaAtual:number) {
-    this.numeroPaginaAtual = this.obterQuantidadePaginas()-1
+  mudarPaginaFinal(numeroPaginaAtual: number) {
+    this.numeroPaginaAtual = this.obterQuantidadePaginas() - 1
   }
 }

@@ -91,12 +91,17 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
+    width: 100%;
     padding: 30px;
 
     font-family: "Open Sans";
     text-align: center;
     color: #343224;
+
+    .paginacao-botoes {
+        width: 15%;
+    }
 
     i {        
         padding: 10px 15px;

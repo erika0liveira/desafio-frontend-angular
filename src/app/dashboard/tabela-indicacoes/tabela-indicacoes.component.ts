@@ -15,6 +15,7 @@ export class TabelaIndicacoesComponent implements OnInit {
 
   maximoPagina = 5
   numeroPaginaAtual = 0
+  maximoPaginacao = 3
 
   constructor(private indicacoesService: IndicacoesService) { }
 
@@ -72,7 +73,26 @@ export class TabelaIndicacoesComponent implements OnInit {
     }
   }
 
-  mudarPagina(numeroPagina: number) {
+  exibirPaginacao() {
+    let i = 0
+    let exibicao:any = []
+
+    for(i=0; i<this.maximoPaginacao; i++) {
+      exibicao.push(this.obterPaginas()[i])
+    }
+
+    if(this.obterQuantidadePagina()-1 - this.numeroPaginaAtual < 3) {     
+      return exibicao
+    } else {
+      exibicao.push("...", this.obterQuantidadePagina())
+      return exibicao
+    }   
+  }
+
+  mudarPagina(numeroPagina: any) {
+    if(numeroPagina === "...") {
+      return
+    }
     this.numeroPaginaAtual = numeroPagina - 1
   }
 

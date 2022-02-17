@@ -2,6 +2,10 @@
     font-family: 'Open Sans';
 }
 
+i {
+    color: #40CFCB;
+}
+
 button:hover {
     cursor: pointer;
 }
@@ -69,10 +73,6 @@ button:hover {
         h2 {
             color: #009E9A;
         }
-
-        i {
-            color: #40CFCB;
-        }
     }
     
     .informacoes-detalhadas {
@@ -100,11 +100,11 @@ button:hover {
         .descricao-informacao {
             font-weight: bold;
         }
-
     }   
 
     .status {
-        width: 45%;
+        width: 40%;
+        margin-right: 20px;
 
         box-shadow: rgba(0, 0, 0, 0.13) 0px 3px 8px;
         border-radius: 5px;
@@ -114,6 +114,10 @@ button:hover {
 
         span {
             text-transform: uppercase;
+        }
+
+        i {
+            float: right;
         }
     }
 

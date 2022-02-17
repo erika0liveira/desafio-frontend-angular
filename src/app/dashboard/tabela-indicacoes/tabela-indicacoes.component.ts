@@ -23,16 +23,9 @@ export class TabelaIndicacoesComponent implements OnInit {
   }
 
   obterQuantidadePagina() {
-
-    let tamanho = this.valoresTabela.length / this.maximoPagina
-
-    if(tamanho % 1 > 0) {
-      return parseInt(tamanho.toFixed(0))+1
-      
-    } else {
-      return parseInt(tamanho.toFixed(0))
-    }
-    
+    let quantidade = this.valoresTabela.length / this.maximoPagina
+    return Math.ceil(quantidade)
+  
   }
 
   obterPaginas() {
